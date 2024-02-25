@@ -34,19 +34,19 @@ function main() {
                 case 'Triangle':
                     shape = new Triangle(data.shapeColor, data.textColor, data.text)
                     var html = shape.makeLogo()
-                    fs.writeFile("logo.svg", html, (err) => err ? console.log(err) : console.log("File written"))
+                    saveToFile(html, 'logo.svg', 'examples');
                         break;
 
                 case 'Circle':
                     shape = new Circle(data.shapeColor, data.textColor, data.text);
                     var html = shape.makeLogo()
-                    fs.writeFile("logo.svg", html, (err) => err ? console.log(err) : console.log("File written"))
+                    saveToFile(html, 'logo.svg', 'examples');
                     break;
 
                 case 'Square':
                     shape = new Square(data.shapeColor, data.textColor, data.text);
                     var html = shape.makeLogo()
-                    fs.writeFile("logo.svg", html, (err) => err ? console.log(err) : console.log("File written"))
+                    saveToFile(html, 'logo.svg', 'examples');
                     break;
                 default:
                     console.error('Wrong Shape Type')
@@ -56,6 +56,17 @@ function main() {
         .then(() => {
             console.log("Created logo.svg")
         })
+}
+
+function saveToFile(content, fileName, folder) {
+    const filePath = __dirname + '/' + folder + '/' + fileName;
+    fs.writeFile(filePath, content, (err) => {
+        if (err) {
+            console.error('Error writing SVG file:', err);
+        } else {
+            console.log(`File written: ${filePath}`);
+        }
+    });
 }
 
 main()
