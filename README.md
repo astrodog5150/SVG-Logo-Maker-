@@ -4,6 +4,7 @@
   ###
 
   ## Table of Contents
+  ### * [Example](#Example)
   ### * [License](#license)
   ### * [Installation](#installation)
   ### * [Usage](#usage)
@@ -11,6 +12,10 @@
   ### * [Tests](#tests)
   ### * [Questions](#Questions)
 
+  ## Example:
+  [SVG Logo Maker Example.webm](https://github.com/astrodog5150/SVG-Logo-Maker-/assets/134658598/048bef3e-b4d7-40be-8557-358edef9313f)
+
+  
   ## Installation:
   ### The following is required to run this app:
   ### run 'npm i' to install required dependencies
